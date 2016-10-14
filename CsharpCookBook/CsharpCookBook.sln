@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpCookBook", "CsharpCookBook\CsharpCookBook.csproj", "{FEB9A679-336E-4CB2-AF0A-5FE68AC61184}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpCookBookTests", "CsharpCookBookTests\CsharpCookBookTests.csproj", "{91059067-5493-4B0E-9143-E7EBA82C25AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcurrencyCookbook", "ConcurrencyCookbook\ConcurrencyCookbook.csproj", "{3E96992A-E4CA-4737-A461-83719CF980F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEB9A679-336E-4CB2-AF0A-5FE68AC61184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEB9A679-336E-4CB2-AF0A-5FE68AC61184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEB9A679-336E-4CB2-AF0A-5FE68AC61184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEB9A679-336E-4CB2-AF0A-5FE68AC61184}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91059067-5493-4B0E-9143-E7EBA82C25AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91059067-5493-4B0E-9143-E7EBA82C25AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91059067-5493-4B0E-9143-E7EBA82C25AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91059067-5493-4B0E-9143-E7EBA82C25AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E96992A-E4CA-4737-A461-83719CF980F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E96992A-E4CA-4737-A461-83719CF980F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E96992A-E4CA-4737-A461-83719CF980F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E96992A-E4CA-4737-A461-83719CF980F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

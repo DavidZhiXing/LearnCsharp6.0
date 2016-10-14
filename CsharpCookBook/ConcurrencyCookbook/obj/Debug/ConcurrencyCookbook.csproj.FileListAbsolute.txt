@@ -1,0 +1,6 @@
+d:\visual studio 2015\Projects\CsharpCookBook\ConcurrencyCookbook\bin\Debug\ConcurrencyCookbook.exe.config
+d:\visual studio 2015\Projects\CsharpCookBook\ConcurrencyCookbook\bin\Debug\ConcurrencyCookbook.exe
+d:\visual studio 2015\Projects\CsharpCookBook\ConcurrencyCookbook\bin\Debug\ConcurrencyCookbook.pdb
+d:\visual studio 2015\Projects\CsharpCookBook\ConcurrencyCookbook\obj\Debug\ConcurrencyCookbook.csprojResolveAssemblyReference.cache
+d:\visual studio 2015\Projects\CsharpCookBook\ConcurrencyCookbook\obj\Debug\ConcurrencyCookbook.exe
+d:\visual studio 2015\Projects\CsharpCookBook\ConcurrencyCookbook\obj\Debug\ConcurrencyCookbook.pdb

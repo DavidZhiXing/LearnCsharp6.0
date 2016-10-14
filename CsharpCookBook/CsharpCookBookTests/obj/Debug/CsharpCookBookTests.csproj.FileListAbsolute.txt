@@ -1,0 +1,9 @@
+d:\visual studio 2015\Projects\CsharpCookBook\CsharpCookBookTests\bin\Debug\CsharpCookBookTests.dll
+d:\visual studio 2015\Projects\CsharpCookBook\CsharpCookBookTests\bin\Debug\CsharpCookBookTests.pdb
+d:\visual studio 2015\Projects\CsharpCookBook\CsharpCookBookTests\bin\Debug\CsharpCookBook.exe
+d:\visual studio 2015\Projects\CsharpCookBook\CsharpCookBookTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+d:\visual studio 2015\Projects\CsharpCookBook\CsharpCookBookTests\bin\Debug\CsharpCookBook.pdb
+d:\visual studio 2015\Projects\CsharpCookBook\CsharpCookBookTests\bin\Debug\zh-Hans\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+d:\visual studio 2015\Projects\CsharpCookBook\CsharpCookBookTests\obj\Debug\CsharpCookBookTests.csprojResolveAssemblyReference.cache
+d:\visual studio 2015\Projects\CsharpCookBook\CsharpCookBookTests\obj\Debug\CsharpCookBookTests.dll
+d:\visual studio 2015\Projects\CsharpCookBook\CsharpCookBookTests\obj\Debug\CsharpCookBookTests.pdb
