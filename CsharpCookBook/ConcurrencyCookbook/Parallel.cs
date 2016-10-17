@@ -52,7 +52,7 @@ namespace ConcurrencyCookbook
             Parallel.Invoke(
 
                 () => ProcessPartialArray(array, 0, array.Length / 2),
-                () => ProcessPartialArray(array, array.Length / 2, array.Length);
+                () => ProcessPartialArray(array, array.Length / 2, array.Length));
         }
 
         private static void ProcessPartialArray(double[] array, int v1, int v2)

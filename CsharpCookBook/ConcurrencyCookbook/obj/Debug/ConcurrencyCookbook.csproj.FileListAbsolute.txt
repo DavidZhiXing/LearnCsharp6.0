@@ -4,3 +4,11 @@ d:\visual studio 2015\Projects\CsharpCookBook\ConcurrencyCookbook\bin\Debug\Conc
 d:\visual studio 2015\Projects\CsharpCookBook\ConcurrencyCookbook\obj\Debug\ConcurrencyCookbook.csprojResolveAssemblyReference.cache
 d:\visual studio 2015\Projects\CsharpCookBook\ConcurrencyCookbook\obj\Debug\ConcurrencyCookbook.exe
 d:\visual studio 2015\Projects\CsharpCookBook\ConcurrencyCookbook\obj\Debug\ConcurrencyCookbook.pdb
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\obj\Debug\ConcurrencyCookbook.csprojResolveAssemblyReference.cache
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\obj\Debug\ConcurrencyCookbook.exe
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\obj\Debug\ConcurrencyCookbook.pdb
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\ConcurrencyCookbook.exe.config
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\ConcurrencyCookbook.exe
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\ConcurrencyCookbook.pdb
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\zh-Hans\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
