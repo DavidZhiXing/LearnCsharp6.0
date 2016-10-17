@@ -4,3 +4,6 @@ d:\visual studio 2015\Projects\CsharpCookBook\CsharpCookBook\bin\Debug\CsharpCoo
 d:\visual studio 2015\Projects\CsharpCookBook\CsharpCookBook\obj\Debug\CsharpCookBook.exe
 d:\visual studio 2015\Projects\CsharpCookBook\CsharpCookBook\obj\Debug\CsharpCookBook.pdb
 d:\visual studio 2015\Projects\CsharpCookBook\CsharpCookBook\obj\Debug\CsharpCookBook.csprojResolveAssemblyReference.cache
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBook\bin\Debug\CsharpCookBook.exe.config
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBook\obj\Debug\CsharpCookBook.exe
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBook\obj\Debug\CsharpCookBook.pdb
