@@ -20,3 +20,5 @@ D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\Nito.Async
 D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\Nito.AsyncEx.Concurrent.xml
 D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\Nito.AsyncEx.Enlightenment.xml
 D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\Nito.AsyncEx.Testing.xml
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\System.Threading.Tasks.Dataflow.dll
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\System.Threading.Tasks.Dataflow.xml

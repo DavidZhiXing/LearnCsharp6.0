@@ -7,3 +7,20 @@ d:\visual studio 2015\Projects\CsharpCookBook\CsharpCookBookTests\bin\Debug\zh-H
 d:\visual studio 2015\Projects\CsharpCookBook\CsharpCookBookTests\obj\Debug\CsharpCookBookTests.csprojResolveAssemblyReference.cache
 d:\visual studio 2015\Projects\CsharpCookBook\CsharpCookBookTests\obj\Debug\CsharpCookBookTests.dll
 d:\visual studio 2015\Projects\CsharpCookBook\CsharpCookBookTests\obj\Debug\CsharpCookBookTests.pdb
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBookTests\bin\Debug\CsharpCookBookTests.dll
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBookTests\bin\Debug\CsharpCookBookTests.pdb
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBookTests\bin\Debug\CsharpCookBook.exe
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBookTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBookTests\bin\Debug\Nito.AsyncEx.Concurrent.dll
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBookTests\bin\Debug\Nito.AsyncEx.dll
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBookTests\bin\Debug\Nito.AsyncEx.Enlightenment.dll
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBookTests\bin\Debug\System.Threading.Tasks.Dataflow.dll
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBookTests\bin\Debug\CsharpCookBook.pdb
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBookTests\bin\Debug\Nito.AsyncEx.xml
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBookTests\bin\Debug\Nito.AsyncEx.Concurrent.xml
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBookTests\bin\Debug\Nito.AsyncEx.Enlightenment.xml
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBookTests\bin\Debug\System.Threading.Tasks.Dataflow.xml
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBookTests\bin\Debug\zh-Hans\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBookTests\obj\Debug\CsharpCookBookTests.csprojResolveAssemblyReference.cache
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBookTests\obj\Debug\CsharpCookBookTests.dll
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBookTests\obj\Debug\CsharpCookBookTests.pdb

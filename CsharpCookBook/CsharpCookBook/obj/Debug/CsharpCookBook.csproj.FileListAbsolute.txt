@@ -7,3 +7,16 @@ d:\visual studio 2015\Projects\CsharpCookBook\CsharpCookBook\obj\Debug\CsharpCoo
 D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBook\bin\Debug\CsharpCookBook.exe.config
 D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBook\obj\Debug\CsharpCookBook.exe
 D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBook\obj\Debug\CsharpCookBook.pdb
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBook\bin\Debug\CsharpCookBook.exe
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBook\bin\Debug\CsharpCookBook.pdb
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBook\bin\Debug\Nito.AsyncEx.Concurrent.dll
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBook\bin\Debug\Nito.AsyncEx.dll
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBook\bin\Debug\Nito.AsyncEx.Enlightenment.dll
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBook\bin\Debug\Nito.AsyncEx.Testing.dll
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBook\bin\Debug\System.Threading.Tasks.Dataflow.dll
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBook\bin\Debug\Nito.AsyncEx.xml
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBook\bin\Debug\Nito.AsyncEx.Concurrent.xml
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBook\bin\Debug\Nito.AsyncEx.Enlightenment.xml
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBook\bin\Debug\Nito.AsyncEx.Testing.xml
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBook\bin\Debug\System.Threading.Tasks.Dataflow.xml
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\CsharpCookBook\obj\Debug\CsharpCookBook.csprojResolveAssemblyReference.cache

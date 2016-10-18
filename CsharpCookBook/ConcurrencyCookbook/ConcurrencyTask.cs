@@ -471,8 +471,6 @@ namespace ConcurrencyCookbook
                 else
                     tcs.TrySetResult(e.Result);
 
-
-
             };
 
             client.DownloadStringCompleted += handler;
@@ -504,7 +502,7 @@ namespace ConcurrencyCookbook
 
     }
 
-    interface IObserver<in T>
+    interface IObserver2<in T>
     {
         void OnNext(T item);
         void OnCompleted();
@@ -512,9 +510,9 @@ namespace ConcurrencyCookbook
         void OnError(Exception error);
     }
 
-    interface IObservable<out T>
+    interface IObservable1<out T>
     {
-        IDisposable Subscribe(IObserver<T> observer);
+        IDisposable Subscribe(IObserver2<T> observer);
     }
 
     interface IMyAsyncInterface
@@ -547,14 +545,14 @@ namespace ConcurrencyCookbook
             //    .Subsribe(x => Trace.WriteLine(x));
         }
 
-        private class Obervable : IObservable<Obervable>
+        private class Obervable : IObservable1<Obervable>
         {
             internal static Object Interval(TimeSpan timeSpan)
             {
                 throw new NotImplementedException();
             }
 
-            public IDisposable Subscribe(IObserver<Obervable> observer)
+            public IDisposable Subscribe(IObserver2<Obervable> observer)
             {
                 throw new NotImplementedException();
             }
