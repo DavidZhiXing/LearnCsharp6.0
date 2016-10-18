@@ -10,8 +10,8 @@ namespace ConcurrencyCookbook
     {
         static  void Main(string[] args)
         {
-            var taskA = ConcurrencyTask.ProcessTaskAsync2();
-            var taskB = ConcurrencyTask.ProcessTaskAsync2();
+            var taskA = ConcurrencyTask1.ProcessTaskAsync2();
+            var taskB = ConcurrencyTask1.ProcessTaskAsync2();
             taskA.Wait();
             taskB.Wait();
 

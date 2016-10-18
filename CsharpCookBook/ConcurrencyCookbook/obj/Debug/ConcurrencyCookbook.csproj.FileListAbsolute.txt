@@ -12,3 +12,11 @@ D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\Concurrenc
 D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\ConcurrencyCookbook.pdb
 D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\zh-Hans\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\Nito.AsyncEx.Concurrent.dll
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\Nito.AsyncEx.dll
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\Nito.AsyncEx.Enlightenment.dll
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\Nito.AsyncEx.Testing.dll
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\Nito.AsyncEx.xml
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\Nito.AsyncEx.Concurrent.xml
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\Nito.AsyncEx.Enlightenment.xml
+D:\GitHub\LearnCsharp6.0\CsharpCookBook\ConcurrencyCookbook\bin\Debug\Nito.AsyncEx.Testing.xml

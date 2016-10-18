@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nito.AsyncEx.Testing</name>
+    </assembly>
+    <members>
+        <member name="T:Nito.AsyncEx.Testing.AsyncAssert">
+            <summary>
+            Provides static methods useful for testing asynchronous methods and tasks.
+            </summary>
+        </member>
+        <member name="M:Nito.AsyncEx.Testing.AsyncAssert.Throws``1(System.Action,System.Boolean)">
+            <summary>
+            Ensures that a synchronous delegate throws an exception of an expected type.
+            </summary>
+            <typeparam name="TException">The type of exception to expect.</typeparam>
+            <param name="action">The synchronous delegate to test.</param>
+            <param name="allowDerivedTypes">Whether derived types should be accepted.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.Testing.AsyncAssert.Throws(System.Action)">
+            <summary>
+            Ensures that a synchronous delegate throws an exception.
+            </summary>
+            <param name="action">The synchronous delegate to test.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.Testing.AsyncAssert.ThrowsAsync``1(System.Func{System.Threading.Tasks.Task},System.Boolean)">
+            <summary>
+            Ensures that an asynchronous delegate throws an exception of an expected type.
+            </summary>
+            <typeparam name="TException">The type of exception to expect.</typeparam>
+            <param name="action">The asynchronous delegate to test.</param>
+            <param name="allowDerivedTypes">Whether derived types should be accepted.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.Testing.AsyncAssert.ThrowsAsync(System.Func{System.Threading.Tasks.Task})">
+            <summary>
+            Ensures that an asynchronous delegate throws an exception.
+            </summary>
+            <param name="action">The asynchronous delegate to test.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.Testing.AsyncAssert.ThrowsAsync``1(System.Threading.Tasks.Task,System.Boolean)">
+            <summary>
+            Ensures that a task throws an exception of an expected type.
+            </summary>
+            <typeparam name="TException">The type of exception to expect.</typeparam>
+            <param name="task">The task to observe.</param>
+            <param name="allowDerivedTypes">Whether derived types should be accepted.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.Testing.AsyncAssert.ThrowsAsync(System.Threading.Tasks.Task)">
+            <summary>
+            Ensures that a task throws an exception.
+            </summary>
+            <param name="task">The task to observe.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.Testing.AsyncAssert.Cancels(System.Action)">
+            <summary>
+            Ensures that a synchronous delegate is cancelled.
+            </summary>
+            <param name="action">The synchronous delegate to test.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.Testing.AsyncAssert.CancelsAsync(System.Func{System.Threading.Tasks.Task})">
+            <summary>
+            Ensures that an asynchronous delegate is cancelled.
+            </summary>
+            <param name="action">The asynchronous delegate to test.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.Testing.AsyncAssert.CancelsAsync(System.Threading.Tasks.Task)">
+            <summary>
+            Ensures that a task is cancelled.
+            </summary>
+            <param name="task">The task to observe.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.Testing.AsyncAssert.NeverCompletesAsync(System.Threading.Tasks.Task,System.Int32)">
+            <summary>
+            Attempts to ensure that a task never completes. If the task takes a long time to complete, this method may not detect that it (incorrectly) completes.
+            </summary>
+            <param name="task">The task to observe.</param>
+            <param name="timeout">The amount of time to (asynchronously) wait for the task to complete.</param>
+        </member>
+    </members>
+</doc>

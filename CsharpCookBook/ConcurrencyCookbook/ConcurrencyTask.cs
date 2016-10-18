@@ -1,14 +1,16 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ConcurrencyCookbook
 {
-    public class ConcurrencyTask
+    public  class ConcurrencyTask1
     {
         static async Task<T> DelayResult<T>(T result,TimeSpan delay)
         {
@@ -293,6 +295,7 @@ namespace ConcurrencyCookbook
             }
         }
 
+
     }
 
     internal class Matrix
@@ -301,6 +304,64 @@ namespace ConcurrencyCookbook
         {
             throw new NotImplementedException();
         }
+    }
+
+    public interface IMyAsyncHttpService
+    {
+        void DownloadString(Uri address, Action<string, Exception> callback);
+    }
+
+    internal static class WrapAsync
+
+    {
+
+        public static Task<string> DownloadStringAsync(this WebClient client, Uri address)
+        {
+            var tcs = new TaskCompletionSource<string>();
+            DownloadStringCompletedEventHandler handler = null;
+            handler = (_, e) =>
+            {
+                client.DownloadStringCompleted -= handler;
+                if (e.Cancelled)
+                {
+                    tcs.TrySetCanceled();
+                }
+                else if (e.Error != null)
+                    tcs.TrySetException(e.Error);
+                else
+                    tcs.TrySetResult(e.Result);
+
+
+
+            };
+
+            client.DownloadStringCompleted += handler;
+            client.DownloadStringAsync(address);
+            return tcs.Task;
+        }
+
+        public static Task<WebResponse> GetRspAsync(this WebRequest client)
+        {
+            return Task<WebResponse>.Factory.FromAsync(client.BeginGetResponse, client.EndGetResponse, null);
+        }
+
+        public static Task<string> DownloadStringAsync(this IMyAsyncHttpService httpService, Uri address)
+        {
+            var tcs = new TaskCompletionSource<string>();
+            httpService.DownloadString(address, (result, ex) =>
+            {
+                if (ex != null)
+                    tcs.TrySetException(ex);
+                else
+                    tcs.TrySetResult(result);
+
+
+
+            });
+
+            return tcs.Task;
+        }
+
     }
 
     interface IObserver<in T>
