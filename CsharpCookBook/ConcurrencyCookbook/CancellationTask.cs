@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net.Http;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -105,9 +107,45 @@ namespace ConcurrencyCookbook
 
         IPropagatorBlock<int,int> CreateMyCustomBlock(CancellationToken token)
         {
-            ISourceBlock<int> divideBlock = null;
-            ITargetBlock<int> multiplayBlock = null;
+            ExecutionDataflowBlockOptions blockOption =
+                new ExecutionDataflowBlockOptions
+                {
+                    CancellationToken = token
+                };
+
+            var divideBlock = new TransformBlock<int,int>(item=>item/2,blockOption);
+            var addBlock = new TransformBlock<int, int>(item => item + 2,blockOption);
+            var multiplayBlock = new TransformBlock<int,int>(item=>item*2,blockOption);
+            var flowComletion = new DataflowLinkOptions
+            {
+                PropagateCompletion = true
+            };
+            multiplayBlock.LinkTo(addBlock, flowComletion);
+            addBlock.LinkTo(divideBlock, flowComletion);
             return DataflowBlock.Encapsulate(multiplayBlock, divideBlock);
+        }
+
+        async Task<HttpResponseMessage> GetWithTimeoutAsync(string url,
+            CancellationToken cancellationToken)
+        {
+            var client = new HttpClient();
+            using (var cts = CancellationTokenSource.
+                CreateLinkedTokenSource(cancellationToken))
+            {
+                cts.CancelAfter(TimeSpan.FromSeconds(2));
+                var combinedToken = cts.Token;
+                return await client.GetAsync(url, combinedToken);
+            }
+        }
+
+        async Task<PingReply> PingAsync(string hostNameOrAddress,
+            CancellationToken token)
+        {
+            var ping = new Ping();
+            using (token.Register(() => ping.SendAsyncCancel()))
+            {
+                return await ping.SendPingAsync(hostNameOrAddress);
+            }
         }
 
         private Task CancelableMethodAsync1(CancellationToken token)
