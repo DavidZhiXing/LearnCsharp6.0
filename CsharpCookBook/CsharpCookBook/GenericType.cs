@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -284,5 +287,234 @@ namespace CsharpCookBook
 
         public string EntityName { get; private set; }
     }
+    public partial class GeneratedEntity
+    {
+        public GeneratedEntity(string entityName)
+        {
+            this.EntityName = entityName;
+        }
 
+        partial void ChangingProperty(string name, string originalValue,
+            string newValue);
+
+
+
+        public string EntityName { get; private set; }
+
+        public string FirstName
+        {
+            get
+            {
+                return _FirstName;
+            }
+
+            set
+            {
+                ChangingProperty("FirstName",_FirstName,value);
+                _FirstName = value;
+            }
+        }
+
+        public string State
+        {
+            get
+            {
+                return _State;
+            }
+
+            set
+            {
+                ChangingProperty("State", _FirstName, value);
+                _State = value;
+            }
+        }
+
+        private string _FirstName;
+
+        private string _State;
+
+        
+
+    }
+
+    public partial class GeneratedEntity
+    {
+        partial void ChangingProperty(string name, string originalValue, string newValue)
+        {
+            Console.WriteLine($"Changed property {name} for entity" +
+                $"{this.EntityName} from" +
+                $"{originalValue} to {newValue}");
+        }
+
+        public static void InvokeInReverse()
+        {
+            Func<int> d1 = TestInvokeIntReturn.Method1;
+            Func<int> d2 = TestInvokeIntReturn.Method2;
+            Func<int> d3 = TestInvokeIntReturn.Method3;
+
+            Func<int> allInstances = d1 + d2 + d3;
+            Console.WriteLine("Fire delegates in reverse");
+            Delegate[] delegateList = allInstances.GetInvocationList();
+            foreach (Func<int> item in delegateList.Reverse())
+            {
+                item();
+            }
+        }
+
+
+        public static void InvokeEveryOtherOpration()
+        {
+            Func<int> d1 = TestInvokeIntReturn.Method1;
+            Func<int> d2 = TestInvokeIntReturn.Method2;
+            Func<int> d3 = TestInvokeIntReturn.Method3;
+            Func<int> allInstances = d1 + d2 + d3;
+            Delegate[] delegateList = allInstances.GetInvocationList();
+
+            Console.WriteLine("Invoke every other delegate");
+            foreach (Func<int> instance in delegateList.EveryOther())
+            {
+                int retVal = instance();
+                Console.WriteLine($"\tOutput:{retVal}");
+            }
+
+
+        }
+
+        public static void InvokeExceptions()
+        {
+            Func<int> d1 = TestInvokeIntReturn.Method1;
+            Func<int> d2 = TestInvokeIntReturn.Method2;
+            Func<int> d3 = TestInvokeIntReturn.Method3;
+            Func<int> allInstances = d1 + d2 + d3;
+            Delegate[] delegateList = allInstances.GetInvocationList();
+            List<Exception> invocationEx = new List<Exception>();
+            Console.WriteLine("Invoke every other delegate");
+            foreach (Func<int> instance in delegateList)
+            {
+                try
+                {
+                    int retVal = instance();
+                    Console.WriteLine($"\tOutput:{retVal}");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                    EventLog myLog = new EventLog();
+                    myLog.Source = "C";
+                    myLog.WriteEntry("");
+                    invocationEx.Add(ex);
+                }
+            }
+            if (invocationEx.Count>0)
+            {
+                throw new MulticastInvocationEx(invocationEx);
+            }
+
+
+        }
+
+    }
+
+    [Serializable]
+    internal class MulticastInvocationEx : Exception
+    {
+        private List<Exception> invocationEx;
+
+        public MulticastInvocationEx():base()
+        {
+        }
+
+        public MulticastInvocationEx(string message) : base(message)
+        {
+        }
+
+        public MulticastInvocationEx(IEnumerable<Exception> invocationEx)
+        {
+            this.invocationEx = new List<Exception>(invocationEx);
+        }
+
+        public MulticastInvocationEx(string message, Exception innerException) : base(message, innerException)
+        {
+        }
+
+        protected MulticastInvocationEx(SerializationInfo info, StreamingContext context) : base(info, context)
+        {
+            this.invocationEx = (List<Exception>)info.GetValue("InvocationExceptions", typeof(List<Exception>));
+        }
+        //[SecurityPermissionAttribute(SecurityAction.Demand,
+        //    SerializationFormatter = true)]
+        //public override void GetObjectData(SerializationInfo info,StreamingContext contex)
+    }
+
+    public static class TestInvokeIntReturn
+    {
+        internal static int Method1()
+        {
+            Console.WriteLine("Method1");
+            return 1;
+        }
+
+        internal static int Method2()
+        {
+            Console.WriteLine("Method1");
+            return 1;
+        }
+
+        internal static int Method3()
+        {
+            Console.WriteLine("Method1");
+            return 1;
+        }
+
+        public static IEnumerable<T> EveryOther<T>(this IEnumerable<T> list)
+        {
+            bool reNext = true;
+            foreach (T t in list)
+            {
+                if (reNext) yield return t;
+                reNext = !reNext;
+            }
+        }
+
+        class SalesPerson
+        {
+            private decimal _commission;
+
+            public SalesPerson()
+            {
+
+            }
+            public SalesPerson(string name,decimal annualQuota,
+                                decimal commissionRate)
+            {
+                this.Name = name;
+                this.AnnualQuota = annualQuota;
+                this.CommissionRate = commissionRate;
+            }
+
+            public decimal AnnualQuota { get; private set; }
+            public decimal CommissionRate { get; private set; }
+            public string Name { get; private set; }
+
+            public decimal Commission
+            {
+                get { return _commission; }
+                set { _commission = value;
+                    this.TotalCommission += _commission;
+                }
+            }
+
+            public decimal TotalCommission { get; private set; }
+            //Action<SalesPerson> CalculateEarning;
+            //static CalculateEarning GetEarningsCalc(decimal quarterlySales,
+            //                                    decimal bonusRate)
+            //{
+            //    SalesPerson salesPerson = new SalesPerson();
+            //    return salesPerson=>
+            //    {
+            //        decimal quota = (salesPerson.)
+            //    }
+            //}
+        }
+    }
 }

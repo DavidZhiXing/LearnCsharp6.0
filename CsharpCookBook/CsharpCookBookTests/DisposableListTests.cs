@@ -31,7 +31,18 @@ namespace CsharpCookBook.Tests
         [TestMethod()]
         public void ClearTest()
         {
-            Assert.Fail();
+            Console.WriteLine("start entity work");
+            GeneratedEntity entity = new GeneratedEntity("FirstEntity");
+            entity.FirstName = "Bob";
+            entity.State = "NH";
+            GeneratedEntity sencondEntity = new GeneratedEntity("sencondEntity");
+            entity.FirstName = "Jay";
+            sencondEntity.FirstName = "Steve";
+            sencondEntity.State = "MA";
+            entity.FirstName = "Barry";
+            sencondEntity.State = "WA";
+            sencondEntity.FirstName = "Matt";
+            Console.WriteLine("End work");
         }
 
         [TestMethod()]
