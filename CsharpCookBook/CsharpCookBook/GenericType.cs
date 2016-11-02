@@ -310,7 +310,7 @@ namespace CsharpCookBook
 
             set
             {
-                ChangingProperty("FirstName",_FirstName,value);
+                ChangingProperty("FirstName", _FirstName, value);
                 _FirstName = value;
             }
         }
@@ -333,7 +333,7 @@ namespace CsharpCookBook
 
         private string _State;
 
-        
+
 
     }
 
@@ -405,7 +405,7 @@ namespace CsharpCookBook
                     invocationEx.Add(ex);
                 }
             }
-            if (invocationEx.Count>0)
+            if (invocationEx.Count > 0)
             {
                 throw new MulticastInvocationEx(invocationEx);
             }
@@ -420,7 +420,7 @@ namespace CsharpCookBook
     {
         private List<Exception> invocationEx;
 
-        public MulticastInvocationEx():base()
+        public MulticastInvocationEx() : base()
         {
         }
 
@@ -484,7 +484,7 @@ namespace CsharpCookBook
             {
 
             }
-            public SalesPerson(string name,decimal annualQuota,
+            public SalesPerson(string name, decimal annualQuota,
                                 decimal commissionRate)
             {
                 this.Name = name;
@@ -499,22 +499,79 @@ namespace CsharpCookBook
             public decimal Commission
             {
                 get { return _commission; }
-                set { _commission = value;
+                set
+                {
+                    _commission = value;
                     this.TotalCommission += _commission;
                 }
             }
 
             public decimal TotalCommission { get; private set; }
-            //Action<SalesPerson> CalculateEarning;
-            //static CalculateEarning GetEarningsCalc(decimal quarterlySales,
-            //                                    decimal bonusRate)
-            //{
-            //    SalesPerson salesPerson = new SalesPerson();
-            //    return salesPerson=>
-            //    {
-            //        decimal quota = (salesPerson.)
-            //    }
-            //}
+            delegate void CalculateEarning(SalesPerson sp);
+            static Action<SalesPerson> GetEarningsCalc(decimal quarterlySales,
+                                                decimal bonusRate)
+            {
+                //SalesPerson salesPerson = new SalesPerson();
+                return salesPerson =>
+                {
+                    decimal quota = (salesPerson.AnnualQuota / 4);
+                    if (quarterlySales < quota)
+                    {
+                        salesPerson.Commission = 0;
+                    }
+                    else if (quarterlySales > (quota * 2.0m))
+                    {
+                        decimal baseComission = quota * salesPerson.Commission;
+                        salesPerson.Commission = (baseComission + ((quarterlySales - quota)
+                        * (salesPerson.Commission * (1 + bonusRate))));
+                    }
+                    else
+                    {
+                        salesPerson.Commission = salesPerson.Commission * quarterlySales;
+                    }
+                };
+            }
+
+            void TestSalePerson()
+            {
+                SalesPerson[] sps =
+                {
+                    new SalesPerson {Name="Chas",AnnualQuota=10000m,Commission = 0.10m },
+                    new SalesPerson {Name="Cas",AnnualQuota=20000m,Commission = 0.010m },
+                    new SalesPerson {Name="has",AnnualQuota=50000m,Commission = 0.020m }
+                };
+
+                QuarterlyEarning[] earnings =
+                {
+                    new QuarterlyEarning {Name="Q1",AnnualQuota=10000m,Commission = 0.10m },
+                    new QuarterlyEarning {Name="Q2",AnnualQuota=20000m,Commission = 0.010m },
+                    new QuarterlyEarning {Name="Q3",AnnualQuota=50000m,Commission = 0.020m }
+                };
+
+                var caculators = from e in earnings
+                                 select new
+                                 {
+                                     Caculator = GetEarningsCalc(e.AnnualQuota, e.Commission),
+                                     QuarterlyEarning = e
+                                 };
+            }
+
+            static void WriteQuarterlyReport(string quarter,decimal quarterSales,
+                CalculateEarning eCalc,SalesPerson[] salePerson)
+            {
+                foreach (var sp in salePerson)
+                {
+                    eCalc(sp);
+                    Console.WriteLine("", sp.Name, sp.Commission);
+                }
+            }
         }
+    }
+
+    internal class QuarterlyEarning
+    {
+        public decimal AnnualQuota { get; internal set; }
+        public decimal Commission { get; internal set; }
+        public string Name { get; internal set; }
     }
 }
