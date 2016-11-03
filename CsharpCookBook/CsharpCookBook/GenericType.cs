@@ -559,10 +559,34 @@ namespace CsharpCookBook
             static void WriteQuarterlyReport(string quarter,decimal quarterSales,
                 CalculateEarning eCalc,SalesPerson[] salePerson)
             {
+                var s0 = $"{quarter} sales earnings on quarterly sales of {quarterSales}";
                 foreach (var sp in salePerson)
                 {
                     eCalc(sp);
+                    var s = $"salesperson {sp.Name} made a commision of:{sp.Commission}";
                     Console.WriteLine("", sp.Name, sp.Commission);
+                }
+            }
+
+            static void WriteCommissionReport(decimal annualEarnings,
+                    SalesPerson[] salePeople)
+            {
+                decimal revenueProduced = (annualEarnings) / salePeople.Length;
+                var whoToCan = from sp in salePeople
+                               select new
+                               {
+                                   CanThem = (revenueProduced * 0.2m) < sp.TotalCommission,
+                                   sp.Name,
+                                   sp.TotalCommission
+
+                               };
+                foreach (var si in whoToCan)
+                {
+                    var s = $"paid+{si.Name} to  {si.TotalCommission} produce {revenueProduced}";
+                    if (si.CanThem)
+                    {
+                        var bb =$"Fire {si.Name}";
+                    }
                 }
             }
         }

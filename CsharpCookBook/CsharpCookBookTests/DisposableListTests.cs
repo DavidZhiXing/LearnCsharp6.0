@@ -48,7 +48,21 @@ namespace CsharpCookBook.Tests
         [TestMethod()]
         public void ContainsTest()
         {
-            Assert.Fail();
+            StockPortfolio tech = new StockPortfolio()
+            {
+                {"abc",-10.5 },
+                {"ddd",2.0 },
+                {"eee",12.3 },
+                {"ggg",0.5 },
+                {"ttt",15.7 },
+                {"PCLS",9.16 }
+            };
+            tech.PrintPortfolio("Starting portfolio");
+            var worst = tech.GetWorstPerformers(2);
+            Console.WriteLine("selling worst");
+            worst.DisplayStocks();
+            tech.SellStocks(worst);
+            tech.PrintPortfolio("After selling worst 3 performers");
         }
 
         [TestMethod()]
