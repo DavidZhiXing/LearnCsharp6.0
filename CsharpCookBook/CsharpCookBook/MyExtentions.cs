@@ -38,7 +38,7 @@ namespace CsharpCookBook
                 var right = center;
                 while (right < (mylist.Count-1) && mylist[right + 1].Equals(searchValue))
                 {
-                    left += 1;
+                    right += 1;
                     ret.Add(mylist[right]);
                 }
             }

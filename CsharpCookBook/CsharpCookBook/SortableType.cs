@@ -134,4 +134,29 @@ namespace CsharpCookBook
         }
 
     }
+
+    public class SortedList<T>:List<T>
+    {
+        public new void Add(T item)
+        {
+            int pos = this.BinarySearch(item);
+            if (pos < 0)
+            {
+                pos = ~pos;
+            }
+            this.Insert(pos, item);
+        }
+
+        public void modifySorted(T item, int index)
+        {
+            this.RemoveAt(index); 
+
+            int pos = this.BinarySearch(item);
+            if (pos<0)
+            {
+                pos = ~pos;
+            }
+            this.Insert(pos, item);
+        }
+    }
 }

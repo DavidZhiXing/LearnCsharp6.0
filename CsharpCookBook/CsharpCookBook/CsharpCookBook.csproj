@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="CloneAbleType.cs" />
     <Compile Include="GenericType.cs" />
+    <Compile Include="MinMaxDictionary.cs" />
     <Compile Include="MyExtentions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
