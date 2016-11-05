@@ -65,13 +65,16 @@
   <ItemGroup>
     <Compile Include="CloneAbleType.cs" />
     <Compile Include="GenericType.cs" />
+    <Compile Include="Group.cs" />
     <Compile Include="MinMaxDictionary.cs" />
     <Compile Include="MyExtentions.cs" />
+    <Compile Include="MyHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchabaleType.cs" />
     <Compile Include="SortableType.cs" />
     <Compile Include="StockPortfolio.cs" />
+    <Compile Include="StringSet.cs" />
     <Compile Include="UnionStruct.cs" />
   </ItemGroup>
   <ItemGroup>

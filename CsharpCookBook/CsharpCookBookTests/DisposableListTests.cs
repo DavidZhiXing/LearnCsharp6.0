@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Collections;
 
 namespace CsharpCookBook.Tests
 {
@@ -187,7 +188,42 @@ namespace CsharpCookBook.Tests
         [TestMethod()]
         public void RemoveAtTest()
         {
-            Assert.Fail();
+            var ht = new ArrayList() { "zero", "one", "two" };
+            foreach (var item in ht)
+            {
+                Console.WriteLine(item);
+            }
+            MyHelper.SerializeToFile<ArrayList>(ht, "ht.data");
+
+            var htNew = new ArrayList();
+            htNew = MyHelper.DeserializeFromFile<ArrayList>("ht.data");
+            foreach (var item in htNew)
+            {
+                Console.WriteLine(item);
+            }
         }
+
+        [TestMethod()]
+        public void ListTest()
+        {
+            var ht = new List<string>() { "zero", "one", "two" };
+            var str = ht.TrueForAll(delegate (string val)
+            {
+                if (val == null)
+                {
+                    return false;
+                }
+                else
+                    return true;
+            }).ToString();
+            Console.WriteLine(str?.Length);
+        }
+
+        [TestMethod()]
+        public void ForeachTest()
+        {
+            GroupEnumerator<string>.CreatNestedObjects();
+        }
+
     }
 }

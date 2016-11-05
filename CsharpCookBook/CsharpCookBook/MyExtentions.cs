@@ -49,5 +49,18 @@ namespace CsharpCookBook
 
         public static int BinarySearchCountAll<T>(this List<T> mylist, T searchValue) =>
             mylist.BinarySearchGetAll(searchValue).Count();
+
+        public static IEnumerable<T> EveryNthIthem<T>(this IEnumerable<T> enumerable,int step)
+        {
+            int current = 0;
+            foreach (var item in enumerable)
+            {
+                ++current;
+                if (current % step==0)
+                {
+                    yield return item;
+                }
+            }
+        }
     }
 }
