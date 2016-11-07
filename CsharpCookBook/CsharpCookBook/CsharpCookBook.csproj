@@ -64,6 +64,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CloneAbleType.cs" />
+    <Compile Include="Fan.cs" />
+    <Compile Include="FanTest.cs" />
     <Compile Include="GenericType.cs" />
     <Compile Include="Group.cs" />
     <Compile Include="MinMaxDictionary.cs" />

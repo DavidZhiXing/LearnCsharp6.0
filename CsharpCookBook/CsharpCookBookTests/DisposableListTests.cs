@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Collections;
+using System.Collections.Concurrent;
+using System.Threading;
 
 namespace CsharpCookBook.Tests
 {
@@ -222,8 +224,10 @@ namespace CsharpCookBook.Tests
         [TestMethod()]
         public void ForeachTest()
         {
-            GroupEnumerator<string>.CreatNestedObjects();
+            //GroupEnumerator<string>.CreatNestedObjects();
+            new FanTest().FanTest2();
         }
+
 
     }
 }
