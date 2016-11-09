@@ -62,5 +62,16 @@ namespace CsharpCookBook
             }
             return obj;
         }
+
+        public static double RoundDown(double valueToRound)
+        {
+            var floorValue = Math.Round(valueToRound);
+            if ((valueToRound - floorValue > .5))
+            {
+                return floorValue + 1;
+            }
+            else
+                return floorValue;
+        }
     }
 }

@@ -228,6 +228,13 @@ namespace CsharpCookBook.Tests
             new FanTest().FanTest2();
         }
 
+        [TestMethod()]
+        public void LinqmqTest()
+        {
+            //GroupEnumerator<string>.CreatNestedObjects();
+            new EnumerableMessageQueueTest().test();
+        }
+
 
     }
 }

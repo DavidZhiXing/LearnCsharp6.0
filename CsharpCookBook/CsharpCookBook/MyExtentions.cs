@@ -62,5 +62,38 @@ namespace CsharpCookBook
                 }
             }
         }
+        /// <summary>
+        /// Safely performing a narrowing numeric cast
+        /// </summary>
+        /// <param name="lhs"></param>
+        /// <param name="rhs"></param>
+        /// <returns></returns>
+        public static int AddNarrowingCheked(this long lhs,long rhs)
+        {
+            return checked((int)(lhs + rhs));
+        }
+        public static void AddNarrowingChekedTest()
+        {
+            long lhs = 340000;
+            var rhs = long.MaxValue;
+            try
+            {
+                var result = lhs.AddNarrowingCheked(rhs);
+            }
+            catch (OverflowException)
+            {
+
+                throw;
+            }
+
+            var sourceValue = 34000;
+            var destinationValue = 0;
+            if (sourceValue<=short.MaxValue && sourceValue>=short.MaxValue)
+            {
+                destinationValue = (short)sourceValue;
+            }
+        }
+        
+
     }
 }
